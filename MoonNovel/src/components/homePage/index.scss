@@ -1,0 +1,14 @@
+.layout-content-box /deep/ .v-content__wrap {
+  height: 100% !important;
+}
+
+.main-content {
+  height: 100%;
+  padding: 0px;
+}
+
+.main-footer{
+  padding: 10px;
+  color: #444;
+  border-top: 1px solid red;
+}
