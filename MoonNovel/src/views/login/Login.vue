@@ -148,7 +148,8 @@
           adminId: this.userName,
           adminPws: CryptoJS.sha256(this.password)
         }
-        login(params).then(data => {
+		this.$router.push({ path: 'home' })
+        /*login(params).then(data => {
           if (data.code === 1) {
             if (this.isRemember) {
               if (this.userNameList.indexOf(this.userName) === -1) {
@@ -168,7 +169,7 @@
           }
         }).catch(err => {
           console.log(err)
-        })
+        })*/
       }
     }
   }
