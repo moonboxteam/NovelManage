@@ -60,8 +60,8 @@
 </template>
 
 <script>
-  import { login } from './api.js'
-  import CryptoJS from 'crypto.js'
+  // import { login } from './api.js'
+  // import CryptoJS from 'crypto.js'
 
   export default {
     data() {
@@ -144,32 +144,32 @@
         this.showPassword = !this.showPassword
       },
       userLogin() {
-        const params = {
-          adminId: this.userName,
-          adminPws: CryptoJS.sha256(this.password)
-        }
-		this.$router.push({ path: 'home' })
-        /*login(params).then(data => {
-          if (data.code === 1) {
-            if (this.isRemember) {
-              if (this.userNameList.indexOf(this.userName) === -1) {
-                this.userNameList.unshift(this.userName)
-              } else if (this.userNameList.indexOf(this.userName) > -1) {
-                this.userNameList.splice(this.userNameList.indexOf(this.userName), 1)
-                this.userNameList.unshift(this.userName)
-              }
-            } else if (this.userNameList.indexOf(this.userName) > -1) {
-              this.userNameList.splice(this.userNameList.indexOf(this.userName), 1)
-            }
-            localStorage.setItem('userNameList', JSON.stringify(this.userNameList))
-            sessionStorage.setItem('userName', this.userName)
-            this.publicMethods.setUserSession(data['credential'])
-            document.onkeydown = undefined
-            this.$router.push({ path: 'home' })
-          }
-        }).catch(err => {
-          console.log(err)
-        })*/
+        // const params = {
+        //   adminId: this.userName,
+        //   adminPws: CryptoJS.sha256(this.password)
+        // }
+        this.$router.push({ path: 'home' })
+        // login(params).then(data => {
+        //   if (data.code === 1) {
+        //     if (this.isRemember) {
+        //       if (this.userNameList.indexOf(this.userName) === -1) {
+        //         this.userNameList.unshift(this.userName)
+        //       } else if (this.userNameList.indexOf(this.userName) > -1) {
+        //         this.userNameList.splice(this.userNameList.indexOf(this.userName), 1)
+        //         this.userNameList.unshift(this.userName)
+        //       }
+        //     } else if (this.userNameList.indexOf(this.userName) > -1) {
+        //       this.userNameList.splice(this.userNameList.indexOf(this.userName), 1)
+        //     }
+        //     localStorage.setItem('userNameList', JSON.stringify(this.userNameList))
+        //     sessionStorage.setItem('userName', this.userName)
+        //     this.publicMethods.setUserSession(data['credential'])
+        //     document.onkeydown = undefined
+        //     this.$router.push({ path: 'home' })
+        //   }
+        // }).catch(err => {
+        //   console.log(err)
+        // })
       }
     }
   }
